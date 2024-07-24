@@ -8,9 +8,11 @@ const equals = document.querySelector(".equal");
 const plus_minus = document.querySelector(".plusminus");
 const percen = document.querySelector(".percentage");
 let operation;
+let cnt=0;
 
 function appendNumber(number) {
     if (number === "." && currentDisplay.innerText.includes(".")) return;
+    if (cnt>0) currentDisplay.innerText = "";
     currentDisplay.innerText += number;
 }
 
@@ -21,6 +23,7 @@ function chooseOperation(operand) {
     }
     operation = operand;
     previousDisplay.innerText = currentDisplay.innerText + " " + operand;
+    cnt = 0;
     currentDisplay.innerText = "";
 }
 
@@ -55,7 +58,7 @@ function calc() {
             return;
     }
     currentDisplay.innerText = result;
-    operation = undefined;
+    cnt += 1;
     previousDisplay.innerText = "";
 }
 
