@@ -12,7 +12,9 @@ let cnt=0;
 
 function appendNumber(number) {
     if (number === "." && currentDisplay.innerText.includes(".")) return;
-    if (cnt>0 || currentDisplay.innerText === "I love you") currentDisplay.innerText = "";
+    if (cnt>0 || currentDisplay.innerText === "I love you") 
+        currentDisplay.innerText = "";
+        cnt = 0;
     currentDisplay.innerText += number;
 }
 
