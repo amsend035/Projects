@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: whitesmoke;
+    height: 100svh;
+    display: flex;
+    justify-content: center; /*make everything mid*/
+    align-items: center; /*make middle align*/
+}
+
+.calculator{
+    display: grid;
+    grid-template-rows: 
+    minmax(80px, auto)
+    repeat(5,60px);
+    grid-template-columns: repeat(4,60px);
+    justify-content: center;
+    background-color: black;
+    padding: 0.4rem;
+    border-radius: 12px;
+    gap: 0.2rem;
+}
+
+.calculator button{
+    border: none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    background-color: rgb(8, 8, 104);
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.calculator button:hover{
+    background-color: orchid;
+}
+
+.calculator > .output {
+    font-size: 2.5rem;
+    background-color:rgb(24, 63, 110);
+    color: cyan;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    word-break: break-all;
+    border-radius: inherit;
+}
+
+.output .previous-display{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: white;
+}
