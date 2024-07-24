@@ -34,7 +34,8 @@ function calc() {
     let result;
     const preValue = parseFloat(previousDisplay.innerText.split(" ")[0]);
     const curValue = parseFloat(currentDisplay.innerText);
-
+    
+    if (curValue === 520) return currentDisplay.innerText = "I love you";
     if (isNaN(preValue) || isNaN(curValue)) return;
 
     switch (operation) {
